@@ -127,10 +127,10 @@ WidevineCrypto.tryDecodingKey=async function(encKey)
 
     let hex=bytesToHex(encKey);
     let res=this.tryUsingDecoder(hex);
-    console.log(hex);
+    //console.log(hex);
    
-    console.log("Output");
-    console.log(res);
+    //console.log("Output");
+    //console.log(res);
     if(res.length<10)
     {
         throw "Could not remove padding, probably invalid key or decoding failure"
@@ -144,9 +144,9 @@ WidevineCrypto.decryptContentKey = async function(licenseRequest, licenseRespons
     licenseResponse = SignedMessage.read(new Pbf(licenseResponse));
     //console.log("Decrypting?")
     //console.log("Request (from us)")
-    console.log(licenseRequest)
+    //console.log(licenseRequest)
     //console.log("Response")
-    console.log(licenseResponse)
+    //console.log(licenseResponse)
     if (licenseRequest.type != SignedMessage.MessageType.LICENSE_REQUEST.value) return;
 
     license = License.read(new Pbf(licenseResponse.msg));
